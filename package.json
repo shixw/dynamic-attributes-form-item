@@ -1,7 +1,7 @@
 {
   "name": "dynamic-attributes-form-item",
   "description": "基于VUE+ElementUI的添加动态属性的表单组件，可直接在基于ElementUI的项目中使用",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "shixw <shixw_usr@126.com>",
   "license": "MIT",
   "private": false,
@@ -10,7 +10,7 @@
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot --content-base='./demo/'",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
-  "homepage": "",
+  "homepage": "https://shixw.github.io/dynamic-attributes-form-item/demo/",
   "repository": {
     "type": "git",
     "url": "https://github.com/shixw/dynamic-attributes-form-item.git"
