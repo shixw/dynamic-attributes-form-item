@@ -11,6 +11,7 @@
 
 ### 示例
 
+![demo](https://github.com/shixw/dynamic-attributes-form-item/blob/master/demo.gif)
 
 
 ### 使用方式
