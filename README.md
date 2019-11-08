@@ -5,8 +5,7 @@
  [![vue2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
 
 
-
-[示例地址]: https://shixw.github.io/dynamic-attributes-form-item/demo/
+## [示例地址]（https://shixw.github.io/dynamic-attributes-form-item/demo/)
 
 
 
