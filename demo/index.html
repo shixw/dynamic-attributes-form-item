@@ -7,15 +7,95 @@
 <body>
   <script src="https://unpkg.com/vue@2.6.10"></script>
   <script src="../dist/dynamic-attributes-form-item.min.js"></script>
+  <!-- 引入样式 -->
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <!-- 引入组件库 -->
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
 <div id="app">
-  <dynamic-attributes-form-item></dynamic-attributes-form-item>
+  <el-form :model="form" ref="createForm" label-width="100px" class="demo-dynamic">
+    <dynamic-attributes-form-item
+      title="添加动态属性"
+      v-model="form.values"
+      attribute-name="动态属性"
+      :attribute-options="extOptions"
+      v-on:all-attributes-added="doSom"></dynamic-attributes-form-item>
+  </el-form>
+  <el-button @click="submitForm">提交</el-button>
 </div>
 <script>
-    var app = new Vue({
+
+    new Vue({
         el: '#app',
         data: {
-            message: 'Hello Vue!'
-        }
+            form: {
+                values: [
+                    {
+                        code: 'attribute1',
+                        value: 'sadasdsa'
+                    },
+                    {
+                        code: 'attribute2',
+                        value: '2'
+                    }
+                ]
+            },
+            extOptions: [
+                {
+                    code: 'attribute1',
+                    name: '测试属性1',
+                    type: 'String'
+                },
+                {
+                    code: 'attribute2',
+                    name: '测试属性2',
+                    type: 'Date'
+                },
+                {
+                    code: 'attribute3',
+                    name: '测试属性3',
+                    type: 'DateTime'
+                },
+                {
+                    code: 'attribute4',
+                    name: '测试属性4',
+                    type: 'Select',
+                    options: [
+                        {
+                            key: '1',
+                            value: '1',
+                            label: 'tt-1'
+                        },
+                        {
+                            key: '2',
+                            value: '2',
+                            label: 'tt-2'
+                        }
+                    ]
+                }
+            ]
+        },
+        methods: {
+            doSom(){
+                this.$notify({
+                    title: '提醒',
+                    message: '没有可以添加的',
+                    type: 'warning',
+                    duration: 2000
+                })
+            },
+            submitForm() {
+                this.$refs['createForm'].validate((valid) => {
+                    if (valid) {
+                        this.$notify({
+                            title: '提醒',
+                            message: '验证通过，可以提交表单',
+                            type: 'success',
+                            duration: 2000
+                        })
+                    }
+                })
+            }
+        },
     })
 </script>
 </body>
