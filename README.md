@@ -3,6 +3,8 @@
 > 此组件为在使用VUE+ElementUI开发项目过程中总结出一个动态属性添加的表单组件,可以直接在依赖ElementUI开发的项目中使用
 
  [![vue2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
+  [![npm](https://img.shields.io/npm/v/dynamic-attributes-form-item)](https://www.npmjs.com/package/dynamic-attributes-form-item)
+ [![npm](https://img.shields.io/npm/dm/dynamic-attributes-form-item)](https://npmcharts.com/compare/dynamic-attributes-form-item)
 
 
 ## [示例地址]（https://shixw.github.io/dynamic-attributes-form-item/demo/)
